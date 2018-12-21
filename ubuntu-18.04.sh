@@ -12,6 +12,11 @@ test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew
 test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
 echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
 
+# python@2
+brew install python2
+# link properly to /usr/bin
+sudo ln -s "$(which python)" /usr/bin/python
+
 # postgres 10
 brew install postgresql
 
