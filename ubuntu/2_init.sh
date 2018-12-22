@@ -39,3 +39,7 @@ echo 'export PATH="/home/linuxbrew/.linuxbrew/opt/node@8/bin:$PATH"' >> ~/.profi
 
 # yarn
 brew install yarn
+
+# aliases
+echo 'alias pgstart="pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgres start"' >> ~/.profile
+echo 'alias pgstop="pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgres stop"' >> ~/.profile
