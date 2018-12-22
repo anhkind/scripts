@@ -3,7 +3,7 @@ sudo apt-get -qq update
 sudo apt-get -qq dist-upgrade
 
 # packages
-sudo DEBIAN_FRONTEND=noninteractive apt-get -yq install build-essential curl file git
+sudo DEBIAN_FRONTEND=noninteractive apt-get -yq install build-essential zlib1g-dev libssl1.0 libssl1.0-dev curl file git
 
 # linuxbrew
 yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
@@ -29,7 +29,6 @@ echo 'eval "$(rbenv init -)"' >> ~/.profile
 
 # ruby 2.3 & bundler
 export RUBY_VERSION=2.3.0
-sudo DEBIAN_FRONTEND=noninteractive apt-get -yq install zlib1g-dev libssl1.0 libssl1.0-dev
 rbenv install -s $RUBY_VERSION
 rbenv global $RUBY_VERSION
 
