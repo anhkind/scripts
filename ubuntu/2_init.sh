@@ -19,6 +19,7 @@ sudo ln -s "$(which python)" /usr/bin/python
 
 # postgres 10
 brew install postgresql
+echo 'host all all 10.0.2.2/32 trust' >> /home/linuxbrew/.linuxbrew/var/postgres/pg_hba.conf
 
 # redis
 brew install redis
