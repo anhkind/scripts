@@ -14,3 +14,4 @@ echo "$PUBLIC_KEY" >> ~/.ssh/authorized_keys
 
 # create new key (from: https://stackoverflow.com/a/3659691/1036829)
 echo -e "\n\n\n" | ssh-keygen -q -t rsa -N '' >/dev/null
+cat ~/.ssh/id_rsa.pub
