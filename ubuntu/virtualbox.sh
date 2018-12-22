@@ -12,6 +12,8 @@ VBoxManage setextradata "$VM_NAME" VBoxInternal2/SharedFoldersEnableSymlinksCrea
 # VBoxManage getextradata "$VM_NAME" enumerate
 
 # add port forwarding
-VBoxManage modifyvm "$VM_NAME" --natpf1 "guestssh,tcp,,2222,,22"
-VBoxManage modifyvm "$VM_NAME" --natpf1 "guest3000,tcp,,3000,,3000"
-VBoxManage modifyvm "$VM_NAME" --natpf1 "guest4200,tcp,,4200,,4200"
+HOST_IP="127.0.0.1"
+GUEST_IP="10.0.2.15"
+VBoxManage modifyvm "$VM_NAME" --natpf1 "guestssh,tcp,$HOST_IP,2222,$GUEST_IP,22"
+VBoxManage modifyvm "$VM_NAME" --natpf1 "guest3000,tcp,$HOST_IP,3000,$GUEST_IP,3000"
+VBoxManage modifyvm "$VM_NAME" --natpf1 "guest4200,tcp,$HOST_IP,4200,$GUEST_IP,4200"
