@@ -1,5 +1,5 @@
 # add virtualbox guest additions
-sudo DEBIAN_FRONTEND=noninteractive apt-get -yq dkms build-essential linux-headers-generic linux-headers-$(uname -r) virtualbox-guest-additions-iso
+sudo DEBIAN_FRONTEND=noninteractive apt-get -yq install dkms build-essential linux-headers-generic linux-headers-$(uname -r) virtualbox-guest-additions-iso
 sudo mount /dev/cdrom /mnt
 sudo su -c '/mnt/VBoxLinuxAdditions.run'
 
